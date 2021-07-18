@@ -35,7 +35,7 @@
 		font-size: 2.5em;
 	}
 	.bet{
-		font-size: 4em;
+		font-size: 1.5em;
 	}
 	.name-team{
 		font-size: 2em;
@@ -109,17 +109,78 @@
 			<div class="col-md-1">
 				&nbsp;
 			</div>
-			<div class="col-md-12">
-				<div class="name-team">มูลค่าสุทธิ</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Hermes</div>
 				<div class="bet">0</div>
-				<span class="addvalue">(+0)</span><br>
-					<input type="text" class="inputv" name="input1" placeholder="0">
+				<input type="text" class="inputv" name="input1" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Aphrodite</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input2" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Gaia</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input3" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Artemis</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input4" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Ares</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input5" placeholder="0">
+				<div class="addvalue">+0</div>
 			</div>
 			<div class="col-md-1">
 				&nbsp;
 			</div>
 		</div>
-		
+		<div class="row" style="text-align:center;">
+			<div class="col-md-1">
+				&nbsp;
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Zeus</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input6" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Cronus</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input7" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Uranus</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input8" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Poseidon</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input9" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-2">
+				<div class="name-team">ทีม Hades</div>
+				<div class="bet">0</div>
+				<input type="text" class="inputv" name="input10" placeholder="0">
+				<div class="addvalue">+0</div>
+			</div>
+			<div class="col-md-1">
+				&nbsp;
+			</div>
+		</div>
 	</div>
 		
 	</div>
@@ -331,18 +392,17 @@
 		}
 
 		$( "#scoreboard input" ).each(function( index ) {
-			var ori = $(this).val()
-			console.log(ori)
+			var ori = $(this).parent().find(".bet").html();
 		  temp = ori*mul;
 		  temp = temp.toFixed(0);
-		  $(this).parent().find('.bet').text(temp)
+		  $(this).val(temp); //edit input
 		  
 		  var eq = temp-ori;
 
 		  	if(eq >= 0.0) {
-		  		$(this).parent().find(".addvalue").html(`(+${eq})`);
+		  		$(this).parent().find(".addvalue").html("+"+eq);
 		  	} else {
-				$(this).parent().find(".addvalue").html(`(+${eq})`);
+				$(this).parent().find(".addvalue").html(eq);
 			}
 
 		});
