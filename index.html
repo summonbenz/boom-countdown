@@ -5,6 +5,9 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
 <!--new-->
 	<style type="text/css">
 	button{
@@ -63,6 +66,22 @@
 	#scoreboard .inputv{
 		color: #000;
 		text-align: center;
+		margin-top: 20px;
+	}
+	button{
+		background: transparent;
+		color: #fff;
+		border:1px solid #fff;
+		border-radius: 10px;
+	}
+	button:hover{
+		color: yellow;
+		border:1px solid yellow;
+	}
+	input{
+		background: rgba(255,255,255,0.5);
+		border: 0px;
+		border-radius: 10px;
 	}
 	</style>
 
@@ -76,7 +95,7 @@
 		</div>
 		<div id="control">
 			<div id="timer">
-				เหลือเวลาอีก
+				เหลือเวลา
 				<span class="countdown">7.0</span>
 				วินาที
 			</div>
@@ -113,7 +132,7 @@
 				<div class="name-team">มูลค่าสุทธิ</div>
 				<div class="bet">0</div>
 				<span class="addvalue">(+0)</span><br>
-					<input type="text" class="inputv" name="input1" placeholder="0">
+				<input type="text" class="inputv" name="input1" placeholder="0">
 			</div>
 			<div class="col-md-1">
 				&nbsp;

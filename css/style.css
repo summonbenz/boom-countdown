@@ -1,20 +1,20 @@
 @font-face {
-	    font-family: 'quark';
+	font-family: 'Prompt', sans-serif;
 	    src: url('../fonts/quark-light.otf');
 	    font-weight: bold;
 	    font-style: normal;
 	}
 	@font-face {
-	    font-family: 'quark-bold';
+	    font-family: 'Prompt', sans-serif;
 	    src: url('../fonts/quark-bold.otf');
 	    font-weight: bold;
 	    font-style: normal;
 	}
 	body{
+		font-family: 'Prompt', sans-serif;
 		background: #000 url('../images/ghost_nebula-wallpaper.jpg') no-repeat;
 		background-size: cover;
 		color: #fff;
-		font-family: 'quark';
 	}
 	.overlay {
 		z-index: 1;
